@@ -1,2 +1,2 @@
 # Grade_checker
- see what your grade is
+see what my grade is in my math class
