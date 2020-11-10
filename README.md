@@ -1,2 +1,2 @@
 # Grade_checker
-Test calcultor, ignore name
+calculate yo grade
