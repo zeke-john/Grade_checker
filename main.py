@@ -8,9 +8,4 @@ test_weight = user_weight/100
 
 x = 1
 for x in range(no_test):
-    user_input_test_score = input("\nWhat score did you get on the " +str(x+1) + str(" one: "))
-    test_score = float(user_input_test_score)
-    print(test_score)
-    x += 1
-
-
+    user_input_test_score = input("\nScore #%d: " %(x+1))
