@@ -9,7 +9,7 @@ while user_input_parts_grade.isnumeric() == False:
 user_parts_grade= float(user_input_parts_grade)
 
 
-y = 0
+y = float(0)
 total_list = [] 
 while y < user_parts_grade:
         user_input_no_Assignments = input("\nHow many Assignments have you taken for this part: ")
@@ -55,5 +55,32 @@ while y < user_parts_grade:
         total_list.append(add_total_Assignments)
         add_total_grade = sum(total_list)
 
-        if y == user_parts_grade:
-                print(str("\nTotal Grade: ") + str(add_total_grade) + str("%"))
+        if add_total_grade > 90:
+                leter_grade = "A"
+
+        if add_total_grade > 86.99 and add_total_grade < 89.99:
+                leter_grade = "B+"
+        if add_total_grade > 82.99 and add_total_grade < 86.98:
+                leter_grade = "B"
+        if add_total_grade > 79.99 and add_total_grade < 82.98:
+                leter_grade = "B-"
+
+        if add_total_grade > 76.99  and add_total_grade < 79.98:
+                leter_grade = "C+"
+        if add_total_grade > 72.99  and add_total_grade < 76.98:
+                leter_grade = "C"
+        if add_total_grade > 69.99  and add_total_grade < 72.98:
+                leter_grade = "C-"
+
+        if add_total_grade > 66.99  and add_total_grade < 69.98:
+                leter_grade = "D+"
+        if add_total_grade > 59.99  and add_total_grade < 66.98:
+                leter_grade = "D"
+
+        if add_total_grade < 59.98:
+                leter_grade = "F"
+
+if y == user_parts_grade:
+        print(str("Total Grade: ") + str(add_total_grade) + str("%") + str(" (Letter Grade: ") + str(leter_grade) + str(")"))  
+        
+
