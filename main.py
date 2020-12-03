@@ -7,6 +7,7 @@ while user_input_parts_grade.isnumeric() == False:
 user_parts_grade= float(user_input_parts_grade)
 
 y = float(0)
+final_list = []
 
 while y < user_parts_grade:
 
@@ -62,19 +63,14 @@ while y < user_parts_grade:
                         div_user_point_list_add_beg_sum = user_point_list_add_beg_sum / user_total_points_for_class
                         mult_by_weight = div_user_point_list_add_beg_sum * Assignments_weight
                         user_point_list_add_end.append(mult_by_weight)
-                        get_thing_we_need = user_point_list_add_end[-1]# last num
-                        
+                        get_thing_we_need = user_point_list_add_end[-1]# last num that has total
                 except:
                         print("\ninvalid entry")
 
                         
         y += 1
-
-
-final = get_thing_we_need * 100
-
+        final_list.append(get_thing_we_need)
+        final_dec_score = sum(final_list)
+        final = final_dec_score * 100
+        
 print(str("\nTotal Grade: ") + str(final) + str("%"))
-
-
-
-
