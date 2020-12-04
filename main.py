@@ -32,7 +32,6 @@ while y < user_parts_grade:
                 user_input_Assignments_weight = input("\nHow much are assignments weighted for this part: ")
 
 
-
         user_input_no_Assignments = input("\nHow many Assignments have you taken for this part: ")
 
         while user_input_no_Assignments.isnumeric() == False:
@@ -41,11 +40,7 @@ while y < user_parts_grade:
 
         no_Assignments = int(user_input_no_Assignments)
 
-
         x = 0
-
-        p = 0
-
         user_point_list_add_beg = []
         user_point_list_add_end = []
         total = 0
@@ -72,5 +67,30 @@ while y < user_parts_grade:
         final_list.append(get_thing_we_need)
         final_dec_score = sum(final_list)
         final = final_dec_score * 100
-        
-print(str("\nTotal Grade: ") + str(final) + str("%"))
+
+        if final > 90:
+                leter_grade = "A"
+
+        if final > 86.99 and final < 89.99:
+                leter_grade = "B+"
+        if final > 82.99 and final < 86.98:
+                leter_grade = "B"
+        if final > 79.99 and final < 82.98:
+                leter_grade = "B-"
+
+        if final > 76.99  and final < 79.98:
+                leter_grade = "C+"
+        if final > 72.99  and final < 76.98:
+                leter_grade = "C"
+        if final > 69.99  and final < 72.98:
+                leter_grade = "C-"
+
+        if final > 66.99  and final < 69.98:
+                leter_grade = "D+"
+        if final > 59.99  and final < 66.98:
+                leter_grade = "D"
+
+        if final < 59.98:
+                leter_grade = "F"
+
+print(str("\nTotal Grade: ") + str(final) + str("%") + str(" (Letter Grade: ") + str(leter_grade) + str(")"))
