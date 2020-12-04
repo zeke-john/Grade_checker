@@ -1,2 +1,2 @@
 # Grade_checker
-calculate grade for any class
+calculate your grade for any class
