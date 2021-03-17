@@ -10,7 +10,6 @@ y = float(0)
 final_list = []
 
 while y < user_parts_grade:
-
         user_input_Assignments_points_total_for_class = input("\nTotal number of points this part of the class is worth: ")
 
         try:
@@ -92,5 +91,5 @@ while y < user_parts_grade:
 
         if final < 59.98:
                 leter_grade = "F"
-
+                
 print(str("\nTotal Grade: ") + str(final) + str("%") + str(" (Letter Grade: ") + str(leter_grade) + str(")"))
